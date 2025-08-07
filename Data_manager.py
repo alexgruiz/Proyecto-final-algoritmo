@@ -53,6 +53,17 @@ def obtener_detalle_obra(obra_id):
         data.get('department', 'Desconocido')
     )
 
+    obra = Obra(
+        id = data['objectID'],
+        titulo = data['title'], 
+        artista = artista, 
+        departamento = departamento, 
+        tipo= data['classification'], 
+        fecha_creacion=data['objectDate'], 
+        imagen_url= data.get('primaryImageSmall', '')
+    )
+
+    return obra
     
         
    
