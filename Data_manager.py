@@ -43,7 +43,18 @@ def obtener_detalle_obra(obra_id):
     # Crear instancias de Artista, Dpto y obra 
     artista = Artista(
         nombre =data['artistDisplayName'],
-        nacionalidad
+        nacionalidad = data.get('artistNationality', 'Desconocida'),
+        fecha_nacimiento = data.get ('artistBegindate', 'Desconocida'),
+        fecha_muerte= data.get('artistEndDate', 'Desconocida')
+    )
+
+    departamento = Departamento(
+        data.get('departmentId', 0),
+        data.get('department', 'Desconocido')
+    )
+
+    
+        
    
 
 
