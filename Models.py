@@ -23,3 +23,4 @@ class Obra:
         self.imagen_url = imagen_url      
     def __str__(self):
         return f"{self.id}: {self.titulo} - {self.artista.nombre}"
+
