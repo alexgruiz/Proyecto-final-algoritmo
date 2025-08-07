@@ -1,6 +1,6 @@
 class Departamento:
     def __init__(self, id, nombre):
-        self.id = id
+        self.id = id 
         self.nombre = nombre
     def __str__(self):
         return f"{self.id}: {self.nombre}"
@@ -23,4 +23,5 @@ class Obra:
         self.imagen_url = imagen_url      
     def __str__(self):
         return f"{self.id}: {self.titulo} - {self.artista.nombre}"
+
 
