@@ -1,5 +1,5 @@
-from PIL import Image # type: ignore
-import requests # type: ignore
+from PIL import Image 
+import requests 
 from io import BytesIO
 def mostrar_imagen(url):
     # Muestra la imagen de una obra desde su URL
@@ -23,3 +23,4 @@ def obtener_autores(obras):
         if obra.artista.nombre:
             autores.add(obra.artista.nombre.strip())
     return sorted(autores)
+
