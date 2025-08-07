@@ -13,7 +13,11 @@ def obtener departamentos ():
 
   return departamentos
 
-def 
+def obtener_obras_por_departamento(departamento_id):
+   # Obtiene las obras de un departamento seleccionado
+   url = f"https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds={departamento_id}" 
+   response = requests.get(url)
+   data = response.json()
 
 
     
