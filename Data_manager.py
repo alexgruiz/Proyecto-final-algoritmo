@@ -1,7 +1,7 @@
 import requests 
 from models import Departamento, Artista, Obra
 
-def obtener departamentos ():
+def obtener_departamentos ():
   ''Obtiene la lista de departamentos del museo desde la API''
   url = ''https://collectionapi.metmuseum.org/public/collection/v1/departments''
   response = requests.get(url)
