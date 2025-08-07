@@ -31,4 +31,20 @@ def obtener_obras_por_departamento(departamento_id):
    return obras    
 
 
+def obtener_detalle_obra(obra_id): 
+    # Obtiene los detalles completos de una obra seleccionada o determinada 
+    url = f"https://collectionapi.metmuseum.org/public/collection/v1/objects/{obra_id}"
+    response = requests.get(url)
+    data = response.json()
+
+    if not data.get('artistDisplayName'):
+        return None 
+
+    # Crear instancias de Artista, Dpto y obra 
+    artista = Artista(
+        nombre =data['artistDisplayName'],
+        nacionalidad
+   
+
+
     
