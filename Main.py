@@ -44,3 +44,8 @@ def mostrar_detalle_obra(obra):
         print("\n¿Desea ver la imagen de la obra? (s/n)")
         if input().lower() == 's': # Si el usuario desea ver la imagen, se muestra
             mostrar_imagen(obra.imagen_url)
+
+def main():
+    # Cargar datos iniciales
+    departamentos = obtener_departamentos()
+    obras = []
