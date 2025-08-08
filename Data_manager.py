@@ -2,8 +2,8 @@ import requests
 from Models import Departamento, Artista, Obra
 
 def obtener_departamentos ():
-  ''Obtiene la lista de departamentos del museo desde la API''
-  url = ''https://collectionapi.metmuseum.org/public/collection/v1/departments''
+  """ Obtiene la lista de departamentos del museo desde la API """
+  url = "https://collectionapi.metmuseum.org/public/collection/v1/departments"
   response = requests.get(url)
   data = response.json ()
 
@@ -20,7 +20,7 @@ def obtener_obras_por_departamento(departamento_id):
    data = response.json()
 
    print(f'Total de obras: {data['total']}')
-   print(''Filtrando obras:'')
+   print("Filtrando obras:")
    obras = []
    for obra_id in data['objectIDs'][:10]:  # Limitado a 10 obras para no sobrecargar la API
         # Si se colocan mas de 10, la API responde con errores variados 
@@ -67,11 +67,11 @@ def obtener_detalle_obra(obra_id):
 
     # Se obtienen las obras filtradas por nacionalidad o autor
     def obtener_obras_por_nacionalidad(obras,nacionalidad):
-        'Filtra las obras según nacionalidad del artista'
+        """Filtra las obras según nacionalidad del artista"""
         return [obra for obra in obras if obra.artista.nacionalidad.lower() == nacionalidad.lower()]
     
     def obtener_obras_por_autor(obras, nombre_autor):
-        ''Filtra obras por nombre del artista''
+        """Filtra obras por nombre del artista"""
         return [obra for obra in obras if nombre_autor.lower() in obra.artista.nombre.lower()]
 
         
