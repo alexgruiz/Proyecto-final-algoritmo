@@ -19,7 +19,7 @@ def obtener_obras_por_departamento(departamento_id):
    response = requests.get(url)
    data = response.json()
 
-   print(f'Total de obras: {data['total']}')
+   print(f"Total de obras: {data['total']}")
    print("Filtrando obras:")
    obras = []
    for obra_id in data['objectIDs'][:10]:  # Limitado a 10 obras para no sobrecargar la API
