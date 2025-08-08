@@ -1,5 +1,5 @@
 import requests 
-from models import Departamento, Artista, Obra
+from Models import Departamento, Artista, Obra
 
 def obtener_departamentos ():
   ''Obtiene la lista de departamentos del museo desde la API''
