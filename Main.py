@@ -26,3 +26,8 @@ def mostrar_obras(obras):
     for obra in obras:
         print(obra)
 
+def mostrar_detalle_obra(obra):
+    # Muestra los detalles completos de una obra seleccionada
+    if not obra:
+        print("No se encontró la obra solicitada.")
+        return
