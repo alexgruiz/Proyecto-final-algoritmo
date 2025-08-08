@@ -49,3 +49,11 @@ def main():
     # Cargar datos iniciales
     departamentos = obtener_departamentos()
     obras = []
+
+    while True:
+        opcion = menu_principal()
+        
+        if opcion == 1:  # Por departamento
+            print("\nDepartamentos disponibles:")
+            for dept in departamentos:
+                print(f"{dept.id}: {dept.nombre}")
