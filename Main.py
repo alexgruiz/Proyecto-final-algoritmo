@@ -95,4 +95,12 @@ def main():
             for i, autor in enumerate(autores, 1):
                 print(f"{i}. {autor}")
 
-            
+            try:
+                seleccion = int(input("\nSeleccione un autor (num): "))
+                if 1 <= seleccion <= len(autores):
+                    nombre = autores[seleccion - 1]
+                else:
+                    print("Número inválido.")
+                    continue
+
+                
