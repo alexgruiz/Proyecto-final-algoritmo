@@ -40,3 +40,7 @@ def mostrar_detalle_obra(obra):
     print(f"Tipo: {obra.tipo}")
     print(f"Año de creación: {obra.fecha_creacion}")
     
+    if obra.imagen_url:
+        print("\n¿Desea ver la imagen de la obra? (s/n)")
+        if input().lower() == 's': # Si el usuario desea ver la imagen, se muestra
+            mostrar_imagen(obra.imagen_url)
