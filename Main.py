@@ -22,4 +22,7 @@ def mostrar_obras(obras):
         print("No se encontraron obras con esos criterios.")
         return
 
-    
+    print("\nObras encontradas:")
+    for obra in obras:
+        print(obra)
+
