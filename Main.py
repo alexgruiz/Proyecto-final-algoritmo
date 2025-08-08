@@ -75,4 +75,14 @@ def main():
             for i, nac in enumerate(nacionalidades, 1):
                 print(f"{i}. {nac}")
 
-            
+            try:
+                seleccion = int(input("\nSeleccione una nacionalidad: ")) - 1
+                if 0 <= seleccion < len(nacionalidades):
+                    obras_filtradas = obtener_obras_por_nacionalidad(obras, nacionalidades[seleccion])
+                    mostrar_obras(obras_filtradas)
+                else:
+                    print("Selección inválida.")
+            except ValueError:
+                print("Por favor ingrese un número válido.")
+
+        
