@@ -128,3 +128,9 @@ def main():
                             obra_seleccionada = obra
                             break
                     mostrar_detalle_obra(obra_seleccionada)
+            except ValueError:
+                print("Entrada inválida.")
+
+if __name__ == "__main__":
+    main()
+                    
