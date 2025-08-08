@@ -16,4 +16,10 @@ def menu_principal():
         print("Por favor ingrese un número válido.")
         return menu_principal()
 
+def mostrar_obras(obras):
+    # Muestra una lista de obras encontradas por departamento
+    if not obras:
+        print("No se encontraron obras con esos criterios.")
+        return
 
+    
