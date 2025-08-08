@@ -85,4 +85,9 @@ def main():
             except ValueError:
                 print("Por favor ingrese un número válido.")
 
-        
+        elif opcion == 3:  # Por autor
+            if not obras:
+                print("Primero debe seleccionar un departamento para cargar obras.")
+                continue
+
+            
