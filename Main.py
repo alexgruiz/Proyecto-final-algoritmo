@@ -65,4 +65,14 @@ def main():
             except ValueError:
                 print("ID de departamento inválido.")
 
-        
+        elif opcion == 2:  # Por nacionalidad
+            if not obras:
+                print("Primero debe seleccionar un departamento para cargar obras.")
+                continue
+                
+            nacionalidades = obtener_nacionalidades(obras)
+            print("\nNacionalidades disponibles:")
+            for i, nac in enumerate(nacionalidades, 1):
+                print(f"{i}. {nac}")
+
+            
