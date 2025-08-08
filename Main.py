@@ -90,4 +90,9 @@ def main():
                 print("Primero debe seleccionar un departamento para cargar obras.")
                 continue
 
+            autores = obtener_autores(obras)
+            print("\nAutores disponibles:")
+            for i, autor in enumerate(autores, 1):
+                print(f"{i}. {autor}")
+
             
