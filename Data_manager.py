@@ -70,6 +70,10 @@ def obtener_detalle_obra(obra_id):
         'Filtra las obras según nacionalidad del artista'
         return [obra for obra in obras if obra.artista.nacionalidad.lower() == nacionalidad.lower()]
     
+    def obtener_obras_por_autor(obras, nombre_autor):
+        ''Filtra obras por nombre del artista''
+        return [obra for obra in obras if nombre_autor.lower() in obra.artista.nombre.lower()]
+
         
    
 
