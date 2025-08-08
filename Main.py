@@ -113,4 +113,10 @@ def main():
             print("Saliendo del sistema")
             break
 
+        else:
+            print("Opción no válida. Por favor intente nuevamente.")
         
+        # Si hay obras mostradas, permitir ver detalles
+        if obras:
+            print("\n¿Desea ver los detalles de una obra? (ingrese ID o 0 para continuar)")
+            
