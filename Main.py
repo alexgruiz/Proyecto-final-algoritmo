@@ -57,3 +57,12 @@ def main():
             print("\nDepartamentos disponibles:")
             for dept in departamentos:
                 print(f"{dept.id}: {dept.nombre}")
+
+            try:
+                dept_id = int(input("\nIngrese el ID del departamento: "))
+                obras = obtener_obras_por_departamento(dept_id)
+                mostrar_obras(obras)
+            except ValueError:
+                print("ID de departamento inválido.")
+
+        
