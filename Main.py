@@ -103,4 +103,14 @@ def main():
                     print("Número inválido.")
                     continue
 
-                
+                obras_filtradas = obtener_obras_por_autor(obras, nombre)
+                mostrar_obras(obras_filtradas)
+            
+            except ValueError:
+                print("Ingrese un número válido.")
+        
+        elif opcion == 4:  # Salir
+            print("Saliendo del sistema")
+            break
+
+        
