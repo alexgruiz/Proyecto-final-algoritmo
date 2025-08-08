@@ -64,6 +64,11 @@ def obtener_detalle_obra(obra_id):
     )
 
     return obra
+
+    # Se obtienen las obras filtradas por nacionalidad o autor
+    def obtener_obras_por_nacionalidad(obras,nacionalidad):
+        'Filtra las obras según nacionalidad del artista'
+        return [obra for obra in obras if obra.artista.nacionalidad.lower() == nacionalidad.lower()]
     
         
    
