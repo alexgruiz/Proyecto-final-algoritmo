@@ -31,3 +31,12 @@ def mostrar_detalle_obra(obra):
     if not obra:
         print("No se encontró la obra solicitada.")
         return
+  
+    print("\nDetalles de la obra: ")
+    print(f"Título: {obra.titulo}")
+    print(f"Artista: {obra.artista.nombre}")
+    print(f"Nacionalidad: {obra.artista.nacionalidad}")
+    print(f"Fechas del artista: {obra.artista.fecha_nacimiento} - {obra.artista.fecha_muerte}")
+    print(f"Tipo: {obra.tipo}")
+    print(f"Año de creación: {obra.fecha_creacion}")
+    
