@@ -119,4 +119,12 @@ def main():
         # Si hay obras mostradas, permitir ver detalles
         if obras:
             print("\n¿Desea ver los detalles de una obra? (ingrese ID o 0 para continuar)")
-            
+            try:
+                obra_id = int(input("ID: "))
+                if obra_id != 0:
+                    obra_seleccionada = None
+                    for obra in obras:
+                        if obra.id == obra_id:
+                            obra_seleccionada = obra
+                            break
+                    mostrar_detalle_obra(obra_seleccionada)
